@@ -1,8 +1,7 @@
+build/
+.gradle/
 target/
-.mvn/wrapper/maven-wrapper.jar
-.mvn/wrapper/maven-wrapper.properties
-mvnw.cmd
-mvnw
+gradlew
 !**/src/main/**/target/
 !**/src/test/**/target/
 
