@@ -1,4 +1,4 @@
-package com.example.mapstruct.demo.repository;
+package com.example.mapstruct.demo;
 
 
 import com.example.mapstruct.demo.entity.Employee;

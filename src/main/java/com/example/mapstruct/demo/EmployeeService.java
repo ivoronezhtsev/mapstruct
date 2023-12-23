@@ -3,7 +3,6 @@ package com.example.mapstruct.demo;
 import com.example.mapstruct.demo.controller.request.EmployeeRequest;
 import com.example.mapstruct.demo.controller.response.EmployeesResponse;
 import com.example.mapstruct.demo.entity.Employee;
-import com.example.mapstruct.demo.repository.EmployeeRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
