@@ -11,11 +11,13 @@ import java.util.Set;
 @Data
 public class Employee {
     @Id
-    @GeneratedValue
+    @GeneratedValue(
+            strategy = GenerationType.IDENTITY
+            // IDENTITY потому что используется ликвибейз, так spring-data берет генератор из СУБД
+    )
     private Long id;
     private String fio;
-    private ZonedDateTime createDate;
-    private ZonedDateTime updateDate;
+    private Integer salary;
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "employee_id")
     private Set<Task> tasks;

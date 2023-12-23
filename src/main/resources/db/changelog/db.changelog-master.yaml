@@ -18,14 +18,11 @@ databaseChangeLog:
                   constraints:
                     primaryKey: true
               - column:
-                  name: create_date
-                  type: timestamp with time zone
-              - column:
-                  name: update_date
-                  type: timestamp with time zone
-              - column:
                   name: fio
                   type: varchar(255)
+              - column:
+                  name: salary
+                  type: int
   - changeSet:
       id: create_task_table
       author: Voronezhtsev Igor
@@ -51,6 +48,5 @@ databaseChangeLog:
                   name: employee_id
                   type: bigint
                   constraints:
-                    nullable: false
                     foreignKeyName: fk_tasks_employee
                     references: employee(id)

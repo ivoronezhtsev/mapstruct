@@ -12,6 +12,5 @@ import lombok.Data;
 public class Task {
     @Id
     private Long id;
-    @Column(name = "description")
     private String description;
 }
