@@ -37,5 +37,6 @@
 componentModel = "spring" нужно для указания что маппер - бин.</br>
 Для сборки обязательно делать mvn clean install, при этом код генерируется.
 
-
-
+### Swagger
+Используется spring-doc</br>
+Доступен по localhost:8080/swagger-ui.html
