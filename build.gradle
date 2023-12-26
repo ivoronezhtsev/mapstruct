@@ -21,4 +21,7 @@ dependencies {
     implementation 'org.mapstruct:mapstruct:1.5.5.Final'
     annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.5.Final'
     implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0'
+    implementation 'org.hibernate:hibernate-jpamodelgen:4.3.11.Final'
+    annotationProcessor 'org.hibernate:hibernate-jpamodelgen:6.2.7.Final'
+    implementation 'jakarta.xml.bind:jakarta.xml.bind-api:4.0.0'
 }
