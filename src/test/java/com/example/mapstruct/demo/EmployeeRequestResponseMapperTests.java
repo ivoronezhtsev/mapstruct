@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class EmployeeRequestResponseMapperTests {
 
-    private static EmployeeRequestResponseMapper mapper = Mappers.getMapper(EmployeeRequestResponseMapper.class);
+    private static final EmployeeRequestResponseMapper mapper = Mappers.getMapper(EmployeeRequestResponseMapper.class);
     @Test
     public void testToResponse() {
         List<Employee> employees = new ArrayList<>();;
