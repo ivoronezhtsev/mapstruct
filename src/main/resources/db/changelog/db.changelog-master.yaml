@@ -50,3 +50,27 @@ databaseChangeLog:
                   constraints:
                     foreignKeyName: fk_tasks_employee
                     references: employee(id)
+  - changeSet:
+      id: create_users_table
+      author: Voronezhtsev Igor
+      preConditions:
+        - onFail: MARK_RAN
+        - not:
+            - tableExists:
+                tableName: users
+      changes:
+        - createTable:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: username
+                  type: varchar(255)
+              - column:
+                  name: password
+                  type: varchar(255)
