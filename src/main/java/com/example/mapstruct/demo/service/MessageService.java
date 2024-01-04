@@ -37,4 +37,5 @@ public class MessageService {
     private AppUserPrincipal getCurrentUser() {
         return (AppUserPrincipal) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
     }
+
 }
