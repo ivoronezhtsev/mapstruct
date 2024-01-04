@@ -8,7 +8,7 @@ import java.util.Collection;
 import java.util.Collections;
 
 public class AppUserPrincipal implements UserDetails {
-    private User user;
+    private final User user;
 
     public AppUserPrincipal(User user) {
         this.user = user;
@@ -47,5 +47,9 @@ public class AppUserPrincipal implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
+    }
+
+    public User getUser() {
+        return user;
     }
 }

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>List of Employee</title>
+</head>
+<body>
+<h1>Welcome!</h1>
+</body>
+<table>
+    <th>Id</th><th>FromUser</th><th>ToUser</th><th>Text</th><th>sendDate</th>
+
+    <tr th:each="message: ${messages}">
+    <td th:text="${message.id}" />
+    <td> </td>
+    <td th:text="${message.fromUser.username}" />
+    <td> </td>
+    <td th:text="${message.toUser.username}" />
+    <td> </td>
+    <td th:text="${message.text}" />
+    <td> </td>
+    <td th:text="${message.sendDate}" />
+</tr>
+</table>
+<input type="button" value="Add" onclick="window.location.href='add'">
+</html>

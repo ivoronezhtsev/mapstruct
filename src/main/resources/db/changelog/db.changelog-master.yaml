@@ -71,6 +71,45 @@ databaseChangeLog:
               - column:
                   name: username
                   type: varchar(255)
+                  constraints:
+                    unique: true
+                    nullable: false
               - column:
                   name: password
                   type: varchar(255)
+  - changeSet:
+      id: create_messages_table
+      author: Voronezhtsev Igor
+      preConditions:
+        - onFail: MARK_RAN
+        - not:
+            - tableExists:
+                tableName: messages
+      changes:
+        - createTable:
+            tableName: messages
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: from_user_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk_from_user
+                    references: users(id)
+              - column:
+                  name: to_user_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk_to_user
+                    references: users(id)
+              - column:
+                  name: text
+                  type: varchar(255)
+              - column:
+                  name: send_date
+                  type: timestamp

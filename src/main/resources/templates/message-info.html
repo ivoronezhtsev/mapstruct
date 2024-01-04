@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>List of Messages</title>
+</head>
+<body>
+<h1>Welcome!</h1>
+</body>
+<h2>Employee Info</h2>
+<br>
+<form th:object="${message}" th:action="save">
+    To : <input th:field="*{toUserName}"/>
+    <br><br>
+    Text: <input th:field="*{text}"/>
+    <br><br>
+    <input type="submit" value="Ok">
+</form>
+</html>
