@@ -96,24 +96,6 @@ databaseChangeLog:
                   name: password
                   value: '$2a$11$5.FZoJDs969.XtEu6UdoH.YqdyuqhrS1iUU5CVbEDBYDiV/G1lVYG'
   - changeSet:
-      id: insert_user
-      author: Voronezhtsev Igor
-      preConditions:
-        - onFail: MARK_RAN
-        - sqlCheck:
-            expectedResult: 0
-            sql: select count(*) from users where username='user'
-      changes:
-        - insert:
-            tableName: users
-            columns:
-              - column:
-                  name: username
-                  value: "user"
-              - column:
-                  name: password
-                  value: '$2a$11$1T28k6ecKD4veHdeU/4QseAPi18oJNRXaYzWzomD4rZ4QPBjeFKcO'
-  - changeSet:
       id: create_messages_table
       author: Voronezhtsev Igor
       preConditions:
