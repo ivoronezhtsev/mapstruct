@@ -1,4 +1,4 @@
-package com.example.mapstruct.demo;
+package com.example.mapstruct.demo.controller;
 
 import lombok.Data;
 

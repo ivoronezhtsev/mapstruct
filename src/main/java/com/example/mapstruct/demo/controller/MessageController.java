@@ -1,6 +1,5 @@
 package com.example.mapstruct.demo.controller;
 
-import com.example.mapstruct.demo.MessageModel;
 import com.example.mapstruct.demo.service.MessageService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;

@@ -1,6 +1,6 @@
 package com.example.mapstruct.demo.service;
 
-import com.example.mapstruct.demo.MessageModel;
+import com.example.mapstruct.demo.controller.MessageModel;
 import com.example.mapstruct.demo.entity.Message;
 import com.example.mapstruct.demo.repository.MessageRepository;
 import com.example.mapstruct.demo.security.AppUserPrincipal;
