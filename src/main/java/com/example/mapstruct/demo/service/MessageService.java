@@ -10,8 +10,8 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 @Service
 @RequiredArgsConstructor
@@ -19,8 +19,8 @@ public class MessageService {
 
     private final MessageRepository messageRepository;
     private final UserRepository userRepository;
-    public List<Message> getMy() {
-        List<Message> result = new ArrayList<>(messageRepository.findAllByToUser(getCurrentUser().getUser()));
+    public Set<Message> getMy() {
+        Set<Message> result = new HashSet<>(messageRepository.findAllByToUser(getCurrentUser().getUser()));
         result.addAll(messageRepository.findAllByFromUser(getCurrentUser().getUser()));
         return result;
     }
